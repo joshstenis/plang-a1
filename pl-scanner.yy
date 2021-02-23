@@ -79,7 +79,7 @@ ALPHA [a-zA-Z]
 {DIGIT}+				{ 
 							return L_INTEGER;
 						}
-{DIGIT}\.{DIGIT}		{
+[(\-{DIGIT}\.{DIGIT}$)(\+{DIGIT}\.{DIGIT}$)({DIGIT}\.{DIGIT}$)]		{
 							return L_FLOAT;
 						}
 \@{ALPHA}+$	        {
