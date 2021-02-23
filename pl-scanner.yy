@@ -25,6 +25,7 @@ YY_DECL;
 
 DIGIT [0-9] 
 ALPHA [a-zA-Z]
+KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if""then""print"]
 
 %%
 
@@ -76,6 +77,9 @@ ALPHA [a-zA-Z]
 "main"				{ 
 						return K_MAIN; 
 	                }
+{KEYWORD}			{
+						return K_{KEYWORD};
+					}
 {DIGIT}+				{ 
 							return L_INTEGER;
 						}
