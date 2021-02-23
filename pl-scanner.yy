@@ -79,10 +79,10 @@ ALPHA [a-zA-Z]
 {DIGIT}+				{ 
 							return L_INTEGER;
 						}
-{DIGIT}*\.*{DIGIT}		{
+{DIGIT}\.{DIGIT}		{
 							return L_FLOAT;
 						}
-{ALPHA}+	        {
+\@{ALPHA}+$	        {
 						return T_ID;
 					}
 <<EOF>>				{ return T_EOF ; }
