@@ -90,6 +90,6 @@ KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if
 						return T_ID;
 					}
 <<EOF>>				{ return T_EOF ; }
-.					{ printf ("Unexpected character\n"); exit (1); }
+.					{ return yytext(0); }
 
 %%

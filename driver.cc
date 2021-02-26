@@ -10,7 +10,7 @@ int main ()
 {
   int next;
   while ((next = yylex ()) != T_EOF) {
-    printf ("token = %d\n", next);
+    printf ("token = %d (%s)\n", next, yytext);
   }
 
   return 0;
