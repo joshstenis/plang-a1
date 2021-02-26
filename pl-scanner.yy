@@ -74,6 +74,7 @@ KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if
 ">"					{
 						return OP_GT;
 					}
+					
 "main"				{ 
 						return K_MAIN; 
 	                }
@@ -89,7 +90,16 @@ KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if
 \@{ALPHA}+$	        {
 						return T_ID;
 					}
-<<EOF>>				{ return T_EOF ; }
-.					{ return yytext(0); }
+<<EOF>>						{ return T_EOF ; }
+.									{ return yytext[0]; }
+
+
 
 %%
+
+int dummy_function(){
+
+  return 1;
+}
+
+
