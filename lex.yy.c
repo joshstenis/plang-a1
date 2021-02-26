@@ -915,28 +915,28 @@ YY_RULE_SETUP
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 77 "pl-scanner.yy"
+#line 78 "pl-scanner.yy"
 { 
 						return K_MAIN; 
 	                }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 80 "pl-scanner.yy"
+#line 81 "pl-scanner.yy"
 {
-						return K_${KEYWORD};
+						return K_{KEYWORD};
 					}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 83 "pl-scanner.yy"
+#line 84 "pl-scanner.yy"
 { 
 							return L_INTEGER;
 						}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 86 "pl-scanner.yy"
+#line 87 "pl-scanner.yy"
 {
 							return L_FLOAT;
 						}
@@ -946,23 +946,23 @@ case 22:
 (yy_c_buf_p) = yy_cp -= 1;
 YY_DO_BEFORE_ACTION; /* set up yytext again */
 YY_RULE_SETUP
-#line 89 "pl-scanner.yy"
+#line 90 "pl-scanner.yy"
 {
 						return T_ID;
 					}
 	YY_BREAK
 case YY_STATE_EOF(INITIAL):
-#line 92 "pl-scanner.yy"
+#line 93 "pl-scanner.yy"
 { return T_EOF ; }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 93 "pl-scanner.yy"
-{ return yytext(0); }
+#line 94 "pl-scanner.yy"
+{ return yytext[0]; }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 95 "pl-scanner.yy"
+#line 98 "pl-scanner.yy"
 ECHO;
 	YY_BREAK
 #line 968 "lex.yy.c"
@@ -1980,6 +1980,13 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 95 "pl-scanner.yy"
+#line 98 "pl-scanner.yy"
+
+
+int dummy_function(){
+
+  return 1;
+}
+
 
 
