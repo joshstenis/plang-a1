@@ -112,5 +112,5 @@ int keywords(stdin s) {
 		case "then": return K_THEN; break;
 		case "print": return K_PRINT; break;
 		default: break;
-	}
+	};
 }

@@ -924,7 +924,7 @@ case 19:
 YY_RULE_SETUP
 #line 81 "pl-scanner.yy"
 {
-						keywords(yytext);
+						return keywords(yytext);
 					}
 	YY_BREAK
 case 20:
@@ -1983,7 +1983,7 @@ void yyfree (void * ptr )
 #line 98 "pl-scanner.yy"
 
 
-int keywords(string s) {
+int keywords(stdin s) {
 	switch(s) {
 		case "integer": return K_INTEGER; break;
 		case "float": return K_FLOAT; break;
@@ -1998,6 +1998,6 @@ int keywords(string s) {
 		case "then": return K_THEN; break;
 		case "print": return K_PRINT; break;
 		default: break;
-	}
+	};
 }
 
