@@ -924,7 +924,7 @@ case 19:
 YY_RULE_SETUP
 #line 81 "pl-scanner.yy"
 {
-						return K_{KEYWORD};
+						keywords(yytext);
 					}
 	YY_BREAK
 case 20:
@@ -1983,10 +1983,21 @@ void yyfree (void * ptr )
 #line 98 "pl-scanner.yy"
 
 
-int dummy_function(){
-
-  return 1;
+int keywords(string s) {
+	switch(s) {
+		case "integer": return K_INTEGER; break;
+		case "float": return K_FLOAT; break;
+		case "foreach": return K_FOREACH; break;
+		case "begin": return K_BEGIN; break;
+		case "end": return K_END; break;
+		case "repeat": return K_REPEAT; break;
+		case "until": return K_UNTIL; break;
+		case "while": return K_WHILE; break;
+		case "declare": return K_DECLARE; break;
+		case "if": return K_IF; break;
+		case "then": return K_THEN; break;
+		case "print": return K_PRINT; break;
+		default: break;
+	}
 }
-
-
 

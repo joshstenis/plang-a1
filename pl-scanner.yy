@@ -97,7 +97,7 @@ KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if
 
 %%
 
-int keywords(string s) {
+int keywords(stdin s) {
 	switch(s) {
 		case "integer": return K_INTEGER; break;
 		case "float": return K_FLOAT; break;
