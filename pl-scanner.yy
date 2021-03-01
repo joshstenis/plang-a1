@@ -83,20 +83,18 @@ KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if
 "main"				{ 
 						return K_MAIN; 
 	                }
-{KEYWORD}			{
-						if(yytext == "integer") return K_INTEGER;
-						else if(strcmp(yytext, "float") == 0) return K_FLOAT;
-						else if(strcmp(yytext, "foreach") == 0) return K_FOREACH;
-						else if(strcmp(yytext, "begin") == 0) return K_BEGIN;
-						else if(strcmp(yytext, "end") == 0) return K_END;
-						else if(strcmp(yytext, "repeat") == 0) return K_REPEAT;
-						else if(strcmp(yytext, "until") == 0) return K_UNTIL;
-						else if(strcmp(yytext, "while") == 0) return K_WHILE;
-						else if(strcmp(yytext, "declare") == 0) return K_DECLARE;
-						else if(strcmp(yytext, "if") == 0) return K_IF;
-						else if(strcmp(yytext, "then") == 0) return K_THEN;
-						else if(strcmp(yytext, "print") == 0) return K_PRINT;
-					}
+"integer"			return K_INTEGER;
+"float"				return K_FLOAT;
+"foreach"			return K_FOREACH;
+"begin"				return K_BEGIN;
+"end"				return K_END;
+"repeat"			return K_REPEAT;
+"until"				return K_UNTIL;
+"then"				return K_THEN;
+"while"				return K_WHILE;
+"declare"			return K_DECLARE;
+"if"				return K_IF;
+"print"				return K_PRINT;
 {DIGIT}+				{ 
 							return L_INTEGER;
 						}
