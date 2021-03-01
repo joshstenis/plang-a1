@@ -26,7 +26,6 @@ YY_DECL;
 SIGN [-+]
 DIGIT [0-9] 
 ALPHA [a-zA-Z]
-KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if""then""print"]
 
 %%
 
@@ -78,7 +77,6 @@ KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if
 ">"					{
 						return OP_GT;
 					}
-
 "main"				{ 
 						return K_MAIN; 
 	                }
@@ -97,7 +95,7 @@ KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if
 {DIGIT}+				{ 
 							return L_INTEGER;
 						}
-"@"*{ALPHA}+.*$	        {
+"@"{ALPHA}+.*$		{
 						return T_ID;
 					}
 <<EOF>>						{ return T_EOF ; }
