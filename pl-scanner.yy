@@ -32,6 +32,9 @@ KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if
 \/\/.*$   
 [ \t]+						
 [\n]+							
+"+"{DIGIT}+"."{DIGIT}$|"-"{DIGIT}+"."{DIGIT}$|{DIGIT}+"."{DIGIT}$		{
+																			return L_FLOAT;
+																		}
 "+"					{
 						return OP_ADD;
 					}
@@ -79,13 +82,21 @@ KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if
 						return K_MAIN; 
 	                }
 {KEYWORD}			{
-						return keywords(yytext);
+						if(strcmp(yytext, "integer") == 0) return K_INTEGER;
+						else if(strcmp(yytext, "float") == 0) return K_FLOAT;
+						else if(strcmp(yytext, "foreach") == 0) return K_FOREACH;
+						else if(strcmp(yytext, "begin") == 0) return K_BEGIN;
+						else if(strcmp(yytext, "end") == 0) return K_END;
+						else if(strcmp(yytext, "repeat") == 0) return K_REPEAT;
+						else if(strcmp(yytext, "until") == 0) return K_UNTIL;
+						else if(strcmp(yytext, "while") == 0) return K_WHILE;
+						else if(strcmp(yytext, "declare") == 0) return K_DECLARE;
+						else if(strcmp(yytext, "if") == 0) return K_IF;
+						else if(strcmp(yytext, "then") == 0) return K_THEN;
+						else if(strcmp(yytext, "print") == 0) return K_PRINT;
 					}
 {DIGIT}+				{ 
 							return L_INTEGER;
-						}
-[(\-{DIGIT}\.{DIGIT}$)(\+{DIGIT}\.{DIGIT}$)({DIGIT}\.{DIGIT}$)]		{
-							return L_FLOAT;
 						}
 \@{ALPHA}+$	        {
 						return T_ID;
@@ -96,21 +107,3 @@ KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if
 
 
 %%
-
-int keywords(stdin s) {
-	switch(s) {
-		case "integer": return K_INTEGER; break;
-		case "float": return K_FLOAT; break;
-		case "foreach": return K_FOREACH; break;
-		case "begin": return K_BEGIN; break;
-		case "end": return K_END; break;
-		case "repeat": return K_REPEAT; break;
-		case "until": return K_UNTIL; break;
-		case "while": return K_WHILE; break;
-		case "declare": return K_DECLARE; break;
-		case "if": return K_IF; break;
-		case "then": return K_THEN; break;
-		case "print": return K_PRINT; break;
-		default: break;
-	};
-}

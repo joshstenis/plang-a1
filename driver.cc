@@ -2,6 +2,7 @@
 #include <string>
 #include "tokens.h"
 
+extern char * yytext;
 
 extern
 int yylex ();
