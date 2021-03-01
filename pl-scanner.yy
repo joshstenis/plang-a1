@@ -2,7 +2,6 @@
 //name, ID; 
 
 #include "tokens.h"
-#include <string.h>
 # undef yywrap
 # define yywrap() 1
 
