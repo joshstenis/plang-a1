@@ -1,8 +1,8 @@
 
 SRCS = driver.cc lex.yy.c
-BIN = pl-scanner.exe
+BIN = 113451118.exe
 CFLAGS = -O3 -I.
-SCANNER = pl-scanner
+SCANNER = 113451118
 #SCANNER = example-flex
 FLEX = flex
 CC = g++

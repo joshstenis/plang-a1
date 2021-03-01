@@ -542,8 +542,8 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "pl-scanner.yy"
-#line 2 "pl-scanner.yy"
+#line 1 "113451118.yy"
+#line 2 "113451118.yy"
 //name, ID; 
 
 #include "tokens.h"
@@ -781,7 +781,7 @@ YY_DECL
 		}
 
 	{
-#line 30 "pl-scanner.yy"
+#line 30 "113451118.yy"
 
 
 #line 787 "lex.yy.c"
@@ -856,18 +856,18 @@ case 1:
 (yy_c_buf_p) = yy_cp -= 1;
 YY_DO_BEFORE_ACTION; /* set up yytext again */
 YY_RULE_SETUP
-#line 32 "pl-scanner.yy"
+#line 32 "113451118.yy"
 
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 33 "pl-scanner.yy"
+#line 33 "113451118.yy"
 
 	YY_BREAK
 case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
-#line 34 "pl-scanner.yy"
+#line 34 "113451118.yy"
 
 	YY_BREAK
 case 4:
@@ -875,179 +875,179 @@ case 4:
 (yy_c_buf_p) = yy_cp -= 1;
 YY_DO_BEFORE_ACTION; /* set up yytext again */
 YY_RULE_SETUP
-#line 35 "pl-scanner.yy"
+#line 35 "113451118.yy"
 {
 									return L_FLOAT;
 								}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 38 "pl-scanner.yy"
+#line 38 "113451118.yy"
 {
 						return OP_ADD;
 					}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 41 "pl-scanner.yy"
+#line 41 "113451118.yy"
 {
 						return OP_SUB;
 					}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 44 "pl-scanner.yy"
+#line 44 "113451118.yy"
 {
 						return OP_MUL;
 					}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 47 "pl-scanner.yy"
+#line 47 "113451118.yy"
 {
 						return OP_DIV;
 					}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 50 "pl-scanner.yy"
+#line 50 "113451118.yy"
 { 
 						return ';'; 
     	            }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 53 "pl-scanner.yy"
+#line 53 "113451118.yy"
 { 
 						return OP_ASSIGN; 
     	            }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 56 "pl-scanner.yy"
+#line 56 "113451118.yy"
 {
 						return OP_ADDINC;
 					}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 59 "pl-scanner.yy"
+#line 59 "113451118.yy"
 {
 						return OP_PLUSPLUS;
 					}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 62 "pl-scanner.yy"
+#line 62 "113451118.yy"
 {
 						return OP_LEQ;
 					}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 65 "pl-scanner.yy"
+#line 65 "113451118.yy"
 {
 						return OP_GEQ;
 					}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 68 "pl-scanner.yy"
+#line 68 "113451118.yy"
 {
 						return OP_EQ;
 					}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 71 "pl-scanner.yy"
+#line 71 "113451118.yy"
 {
 						return OP_DIFF;
 					}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 74 "pl-scanner.yy"
+#line 74 "113451118.yy"
 {
 						return OP_LT;
 					}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 77 "pl-scanner.yy"
+#line 77 "113451118.yy"
 {
 						return OP_GT;
 					}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 80 "pl-scanner.yy"
+#line 80 "113451118.yy"
 { 
 						return K_MAIN; 
 	                }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 83 "pl-scanner.yy"
+#line 83 "113451118.yy"
 return K_INTEGER;
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 84 "pl-scanner.yy"
+#line 84 "113451118.yy"
 return K_FLOAT;
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 85 "pl-scanner.yy"
+#line 85 "113451118.yy"
 return K_FOREACH;
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 86 "pl-scanner.yy"
+#line 86 "113451118.yy"
 return K_BEGIN;
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 87 "pl-scanner.yy"
+#line 87 "113451118.yy"
 return K_END;
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 88 "pl-scanner.yy"
+#line 88 "113451118.yy"
 return K_REPEAT;
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 89 "pl-scanner.yy"
+#line 89 "113451118.yy"
 return K_UNTIL;
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 90 "pl-scanner.yy"
+#line 90 "113451118.yy"
 return K_THEN;
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 91 "pl-scanner.yy"
+#line 91 "113451118.yy"
 return K_WHILE;
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 92 "pl-scanner.yy"
+#line 92 "113451118.yy"
 return K_DECLARE;
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 93 "pl-scanner.yy"
+#line 93 "113451118.yy"
 return K_IF;
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 94 "pl-scanner.yy"
+#line 94 "113451118.yy"
 return K_PRINT;
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 95 "pl-scanner.yy"
+#line 95 "113451118.yy"
 { 
 							return L_INTEGER;
 						}
@@ -1057,23 +1057,23 @@ case 33:
 (yy_c_buf_p) = yy_cp -= 1;
 YY_DO_BEFORE_ACTION; /* set up yytext again */
 YY_RULE_SETUP
-#line 98 "pl-scanner.yy"
+#line 98 "113451118.yy"
 {
 						return T_ID;
 					}
 	YY_BREAK
 case YY_STATE_EOF(INITIAL):
-#line 101 "pl-scanner.yy"
+#line 101 "113451118.yy"
 { return T_EOF ; }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 102 "pl-scanner.yy"
+#line 102 "113451118.yy"
 { return yytext[0]; }
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 104 "pl-scanner.yy"
+#line 104 "113451118.yy"
 ECHO;
 	YY_BREAK
 #line 1079 "lex.yy.c"
@@ -2091,6 +2091,6 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 104 "pl-scanner.yy"
+#line 104 "113451118.yy"
 
 
