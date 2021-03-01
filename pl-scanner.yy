@@ -34,8 +34,8 @@ KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if
 [ \t]+						
 [\n]+							
 {SIGN}*{DIGIT}+"."{DIGIT}+$		{
-																			return L_FLOAT;
-																		}
+									return L_FLOAT;
+								}
 "+"					{
 						return OP_ADD;
 					}
@@ -97,7 +97,7 @@ KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if
 {DIGIT}+				{ 
 							return L_INTEGER;
 						}
-"@"{ALPHA}+$	        {
+"@"*{ALPHA}+.*$	        {
 						return T_ID;
 					}
 <<EOF>>						{ return T_EOF ; }
