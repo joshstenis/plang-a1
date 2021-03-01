@@ -2,6 +2,7 @@
 //name, ID; 
 
 #include "tokens.h"
+#include <string.h>
 # undef yywrap
 # define yywrap() 1
 
@@ -23,6 +24,7 @@ YY_DECL;
 %option yylineno
 %option noyywrap 
 
+SIGN [-+]
 DIGIT [0-9] 
 ALPHA [a-zA-Z]
 KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if""then""print"]
@@ -32,7 +34,7 @@ KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if
 \/\/.*$   
 [ \t]+						
 [\n]+							
-"+"{DIGIT}+"."{DIGIT}$|"-"{DIGIT}+"."{DIGIT}$|{DIGIT}+"."{DIGIT}$		{
+{SIGN}*{DIGIT}+"."{DIGIT}+$		{
 																			return L_FLOAT;
 																		}
 "+"					{
@@ -82,7 +84,7 @@ KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if
 						return K_MAIN; 
 	                }
 {KEYWORD}			{
-						if(strcmp(yytext, "integer") == 0) return K_INTEGER;
+						if(yytext == "integer") return K_INTEGER;
 						else if(strcmp(yytext, "float") == 0) return K_FLOAT;
 						else if(strcmp(yytext, "foreach") == 0) return K_FOREACH;
 						else if(strcmp(yytext, "begin") == 0) return K_BEGIN;
@@ -98,12 +100,10 @@ KEYWORD ["integer""float""foreach""begin""end""repeat""until""while""declare""if
 {DIGIT}+				{ 
 							return L_INTEGER;
 						}
-\@{ALPHA}+$	        {
+"@"{ALPHA}+$	        {
 						return T_ID;
 					}
 <<EOF>>						{ return T_EOF ; }
 .									{ return yytext[0]; }
-
-
 
 %%
